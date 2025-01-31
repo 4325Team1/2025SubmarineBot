@@ -16,8 +16,44 @@ public class CoralSubsystem extends SubsystemBase {
    
 
   }
-  public void floorLevelOne()
+  public void LevelOneRight()
   {
-    
+  }
+
+  public void LevelOneLeft()
+  {
+  }
+
+  public void LevelTwoRight()
+  {
+  }
+
+  public void LevelTwoLeft()
+  {
+  }
+
+  public void LevelThreeRight()
+  {
+  }
+
+  public void LevelThreeLeft()
+  {
+  }
+
+  public void LevelFourRight()
+  {
+  }
+
+  public void LevelFourLeft()
+  {
+  }
+  
+  public void WristTurn()
+  { 
+  }
+  
+  public void ElebowTurn()
+  {
   }
 }
+
