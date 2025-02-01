@@ -3,11 +3,11 @@
 // the WPILib BSD license file in the root directory of this project.
 
 package frc.robot.subsystems;
-import frc.robot.commands.LimelightCameraCMD;
-
+import frc.robot.RobotContainer;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
-public class Coral extends SubsystemBase {
+public class CoralSubsystem extends SubsystemBase {
   /** Creates a new CoralSubsystem. */
   public DriveSubsystem m_driveSubsystem;
   public LimeLightSubsystem m_cameraData;
@@ -33,21 +33,10 @@ public class Coral extends SubsystemBase {
     {m_cameraData.SwitchPipeline(0);
     SmartDashboard.putString("pipeline 0", "ture");
     }
-    if(m_cameraData.haveTarget) 
-    return;
-      
-      alignment = m_cameraData.distanceFinder - wantedDistance;
-      if(!alignment)
-      {
-        m_driveSubsystem.VisionDrive(-(m_cameraData.goalHeightInches - m_cameraData.distanceFinder()), 0 ,0); 
-        return;
-      }
-      else 
-      { 
-        m_driveSubsystem.stopModules();
-      }
-    }
-      public void levelOneLeft()
+
+  }
+  
+  public void levelOneLeft()
       {
         SmartDashboard.putString("pipeline 1", "false");
         // 1. check if right triger is being presses

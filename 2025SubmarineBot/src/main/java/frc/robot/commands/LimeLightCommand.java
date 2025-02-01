@@ -6,6 +6,7 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Subsystem;
+import frc.robot.subsystems.LimeLightSubsystem;
 
 /* You should consider using the more terse Command factories API instead https://docs.wpilib.org/en/stable/docs/software/commandbased/organizing-command-based.html#defining-commands */
 public class LimeLightCommand extends Command {
@@ -27,7 +28,7 @@ public class LimeLightCommand extends Command {
     m_LimelightCamera.distanceFinder();
     m_LimelightCamera.limelight_range_proportional();
     m_LimelightCamera.limelight_range_proportional_ty();
-    m_LimelightCamera.SwitchPipeline();
+    
   }
 
   // Called once the command ends or is interrupted.

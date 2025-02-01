@@ -7,7 +7,9 @@ package frc.robot;
 import edu.wpi.first.math.MathUtil;
 import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.Constants.OIConstants;
+import frc.robot.commands.LimeLightCommand;
 import frc.robot.subsystems.DriveSubsystem;
+import frc.robot.subsystems.LimeLightSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
@@ -63,7 +65,7 @@ public class RobotContainer {
         .whileTrue(new RunCommand(
             () -> m_robotDrive.setX(),
             m_robotDrive));*/
-    m_driverController.a().whileTrue(new LimeLightCommand());
+    m_driverController.a().whileTrue(new LimeLightCommand(m_cameraData));
         
   }
 
